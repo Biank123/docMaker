@@ -1,0 +1,83 @@
+/* Estilo general */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 100vh;
+    background-color: #000000e3;
+    color: #ecf0f1;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.342);
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+    text-align: center;
+    z-index: 1000;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    margin: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: #ee38f4;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+
+/* Ocultar sidebar en móviles por defecto */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+}
+
+/* Botón de menú de hamburguesa */
+.hamburger-menu {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 88%;
+    height: 10%;
+    margin: 5px;
+    background-color: #422c50;
+    color: #ecf0f1;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+}
